@@ -1,0 +1,19 @@
+{
+  "extractors": [
+    {
+      "title": "Sophos Web Appliance Raw Message Grok",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "<30>%{SYSLOGTIMESTAMP:timestamp_raw} %{DATA:Host} h=%{DATA:Client} u=%{DATA:User} s=%{BASE10NUM:HTTP-Status} X=%{DATA:Status_after_complet} t=%{BASE10NUM:Timestamp_Seconds} T=%{BASE10NUM:Required_Time_Micro} Ts=%{BASE10NUM:Request_Durration} act=%{DATA:Action_Code} cat=%{DATA:URI_Category} app=%{DATA:Identified_App} rsn=%{DATA:Blocked_Reason} threat=%{DATA:Threat_Found} type=%{DATA:MIME_Type} ctype=%{DATA:Content-Type} sav-ev=%{DATA:Sopos-Engine} sav-dv=%{DATA:Sopos-Data} uri-dv=%{DATA:Sopos-URI} cache=%{DATA:used-Cache} in=%{BASE10NUM:Bytes-In} out=%{BASE10NUM:Bytes-Out} meth=%{DATA:HTTP-Request-Method} ref=%{DATA:HTTP-Referrer} ua=\"%{DATA:user-agent}\" req=\"%{DATA:HTTP-request-String}\" dom=%{DATA:Domain} filetype=%{DATA:Filetype} rule=%{DATA:Rule-ID} filesize=%{DATA:Filesize} axtime=%{DATA:Time_Access_Checks} fttime=%{DATA:Time_File_Type_Check} scantime=%{DATA:Time_Scan} src_cat=%{DATA:Internal_src_cat} labs_cat=%{DATA:Internal_labs_cat} dcat_prox=%{DATA:Internal_Dcat_Prox} target_ip=%{DATA:Target_IP} labs_rule_id=%{DATA:Internal_Labs_Rule_Id} reqtime=%{DATA:Time_in_Scanning_Queue} adtime=%{DATA:Time_AD_Scan} "
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.2.0-SNAPSHOT"
+}
